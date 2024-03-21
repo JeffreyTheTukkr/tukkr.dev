@@ -1,0 +1,83 @@
+/**
+ * custom css reset
+ *
+ * based on:
+ * - joshwcomeau.com/css/custom-css-reset/#digit-font-smoothing
+ * - andy-bell.co.uk/a-modern-css-reset
+ */
+
+// more-intuitive box sizing model
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// remove default margins
+* {
+    margin: 0;
+}
+
+// inherit viewport height
+html {
+    height: 100%;
+}
+
+// minimum viewport height to allow for scrolling of content
+// and improved text rendering
+body {
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+// enable smooth scrolling
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+// avoid text overflows
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}
+
+// pass underline under glyphs
+a {
+    text-decoration-skip-ink: auto;
+}
+
+// inherit font on form elements
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+// improved media defaults
+img,
+picture,
+svg,
+canvas,
+video,
+audio {
+    display: block;
+    max-width: 100%;
+}
+
+// disable animations if browser preference is set
+@media (prefers-reduced-motion) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
