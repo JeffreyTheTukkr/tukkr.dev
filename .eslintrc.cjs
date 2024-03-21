@@ -4,7 +4,8 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:svelte/recommended'
+        'plugin:svelte/recommended',
+        'prettier'
     ],
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
@@ -26,5 +27,15 @@ module.exports = {
                 parser: '@typescript-eslint/parser'
             }
         }
+    ],
+    ignorePatterns: [
+        '.DS_Store',
+        'Thumbs.db',
+        '.idea/',
+        '.vscode/',
+        'build/',
+        'node_modules/',
+        '.svelte-kit/',
+        'pnpm-lock.yaml'
     ]
 };
