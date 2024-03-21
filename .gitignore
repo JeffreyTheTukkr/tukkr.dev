@@ -5,3 +5,10 @@ Thumbs.db
 # editors
 .idea/
 .vscode/
+
+# nodejs
+build/
+node_modules/
+
+# sveltekit
+.svelte-kit/
