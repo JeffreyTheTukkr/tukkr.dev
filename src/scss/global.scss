@@ -9,15 +9,13 @@ html {
 body {
     font-family: $font-family-primary;
     font-weight: $font-weight-primary-regular;
-    
+
     // light theme
     &.light-theme {
-        
     }
-    
+
     // dark theme
     &.dark-theme {
-        
     }
 }
 
@@ -28,32 +26,32 @@ h1 {
 
     // light theme
     &.light-theme {
-
     }
 
     // dark theme
     &.dark-theme {
-
     }
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $font-family-primary;
     font-weight: $font-weight-primary-medium;
 
     // light theme
     &.light-theme {
-
     }
 
     // dark theme
     &.dark-theme {
-
     }
 }
 
 h2 {
-    font-size: $font-size-heading-2;    
+    font-size: $font-size-heading-2;
 }
 
 h3 {
