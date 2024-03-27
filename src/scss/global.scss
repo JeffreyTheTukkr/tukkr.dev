@@ -4,6 +4,7 @@
 
 html {
     font-size: 16px;
+    height: 100vh;
 }
 
 body {
@@ -12,27 +13,18 @@ body {
 
     // light theme
     &.light-theme {
+        background-color: #fff;
+        background-image: linear-gradient(to bottom, #fff, #679dff);
     }
 
     // dark theme
     &.dark-theme {
+        background-color: #111827;
+        background-image: linear-gradient(to bottom, #000, #111827);
     }
 }
 
-h1 {
-    font-family: $font-family-secondary;
-    font-weight: $font-weight-secondary-bold;
-    font-size: $font-size-heading-1;
-
-    // light theme
-    &.light-theme {
-    }
-
-    // dark theme
-    &.dark-theme {
-    }
-}
-
+h1,
 h2,
 h3,
 h4,
@@ -43,11 +35,17 @@ h6 {
 
     // light theme
     &.light-theme {
+        color: #000;
     }
 
     // dark theme
     &.dark-theme {
+        color: #fff;
     }
+}
+
+h1 {
+    font-size: $font-size-heading-1;
 }
 
 h2 {
