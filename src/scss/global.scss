@@ -10,18 +10,11 @@ html {
 body {
     font-family: $font-family-primary;
     font-weight: $font-weight-primary-regular;
-
-    // light theme
-    &.light-theme {
-        background-color: #fff;
-        background-image: linear-gradient(to bottom, #fff, #679dff);
-    }
-
-    // dark theme
-    &.dark-theme {
-        background-color: #111827;
-        background-image: linear-gradient(to bottom, #000, #111827);
-    }
+    
+    // colors and backgrounds
+    background-color: #111827;
+    background-image: linear-gradient(to bottom, #000, #111827);
+    color: #fff;
 }
 
 h1,
@@ -30,18 +23,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-family-primary;
-    font-weight: $font-weight-primary-medium;
-
-    // light theme
-    &.light-theme {
-        color: #000;
-    }
-
-    // dark theme
-    &.dark-theme {
-        color: #fff;
-    }
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-secondary-bold;
 }
 
 h1 {
