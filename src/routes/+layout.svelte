@@ -11,6 +11,6 @@
 
 <style lang="scss">
     main {
-        padding: clamp(8rem, 18vh, 24vh) 0;
+        padding: clamp(8rem, 16vh, 20vh) 0;
     }
 </style>
