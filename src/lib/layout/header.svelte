@@ -1,4 +1,9 @@
 <script lang="ts">
+    import {page} from "$app/stores";
+
+    $: isCurrentPage = (path: string): boolean => {
+        return $page.url.pathname === path
+    } 
 </script>
 
 <header>
@@ -8,10 +13,10 @@
         </a>
     </div>
     <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/snippets">Snippets</a>
-        <a href="/contact">Contact</a>
+        <a href="/" class:active={isCurrentPage('/')}>Home</a>
+        <a href="/about" class:active={isCurrentPage('/about')}>About</a>
+        <a href="/snippets" class:active={isCurrentPage('/snippets')}>Snippets</a>
+        <a href="/contact" class:active={isCurrentPage('/contact')}>Contact</a>
     </nav>
 </header>
 
@@ -34,6 +39,11 @@
 
             a {
                 padding: 0.4rem;
+                
+                &.active {
+                    font-weight: $font-weight-primary-medium;
+                    color: #fff;
+                }
             }
         }
     }
