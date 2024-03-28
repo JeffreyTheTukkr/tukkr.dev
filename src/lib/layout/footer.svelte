@@ -4,7 +4,7 @@
 <footer>
     <div class="container">
         <div class="info">
-            <span><b>tukkr</b></span>
+            <span class="name"><b>tukkr</b></span>
             <span><a href="mailto:info@tukkr.dev">info@tukkr.dev</a></span>
             <span><a href="/contact">More information</a></span>
         </div>
@@ -39,6 +39,10 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+        }
+        
+        .info .name {
+            color: #fff;
         }
     }
 </style>
