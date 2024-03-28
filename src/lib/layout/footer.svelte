@@ -29,9 +29,13 @@
         // general layout
         .container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
-            gap: 1rem;
+            gap: 2rem;
+
+            @include mediaQuery(s) {
+                flex-direction: row;
+            }
 
             > div,
             > nav {
