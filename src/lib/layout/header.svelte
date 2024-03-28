@@ -27,15 +27,21 @@
 <header class={scrollOffsetClass()}>
     <div class="logo">
         <a href="/">
-            <img src="/logo.svg" alt="tukkr logo" height="40" />
+            <img alt="tukkr logo" height="40" src="/logo.svg" />
         </a>
     </div>
-    <button on:click={toggleMobileMenu} aria-controls="main-menu" aria-expanded={mobileMenuActive ? 'true' : 'false'} aria-label="Toggle main menu">Menu</button>
-    <nav id="main-menu" class:active={mobileMenuActive} role="navigation" aria-label="Main menu">
-        <a href="/" class:active={isCurrentPage('/')}>Home</a>
-        <a href="/about" class:active={isCurrentPage('/about')}>About</a>
-        <a href="/snippets" class:active={isCurrentPage('/snippets')}>Snippets</a>
-        <a href="/contact" class:active={isCurrentPage('/contact')}>Contact</a>
+    <button aria-controls="main-menu" aria-expanded={mobileMenuActive ? 'true' : 'false'} aria-label="Toggle main menu" on:click={toggleMobileMenu}>
+        <svg class:active={mobileMenuActive} viewBox="0 0 100 100" width="40">
+            <path d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+            <path d="m 70,50 h -40" />
+            <path d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+        </svg>
+    </button>
+    <nav aria-label="Main menu" class:active={mobileMenuActive} id="main-menu" role="navigation">
+        <a class:active={isCurrentPage('/')} href="/">Home</a>
+        <a class:active={isCurrentPage('/about')} href="/about">About</a>
+        <a class:active={isCurrentPage('/snippets')} href="/snippets">Snippets</a>
+        <a class:active={isCurrentPage('/contact')} href="/contact">Contact</a>
     </nav>
 </header>
 
@@ -57,12 +63,55 @@
             padding: 1.2rem 2rem;
         }
 
+        // hamburger menu
         button {
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+
             @include mediaQuery(s) {
                 display: none;
             }
+
+            // svg layout and animation
+            svg {
+                transition: transform 400ms;
+                user-select: none;
+
+                path {
+                    fill: none;
+                    transition:
+                        stroke-dasharray 400ms,
+                        stroke-dashoffset 400ms;
+                    stroke: #fff;
+                    stroke-width: 5.5;
+                    stroke-linecap: round;
+                }
+
+                &:first-child {
+                    stroke-dasharray: 40 121;
+                }
+
+                &:last-child {
+                    stroke-dasharray: 40 121;
+                }
+
+                &.active {
+                    transform: rotate(45deg);
+
+                    &:first-child {
+                        stroke-dashoffset: -68px;
+                    }
+
+                    &:last-child {
+                        stroke-dashoffset: -68px;
+                    }
+                }
+            }
         }
 
+        // navigation
         nav {
             display: none;
             flex-direction: column;
