@@ -16,7 +16,7 @@
     let mobileMenuActive: boolean;
     $: toggleMobileMenu = (): void => {
         mobileMenuActive = !mobileMenuActive;
-    }
+    };
 </script>
 
 <svelte:window bind:scrollY />
