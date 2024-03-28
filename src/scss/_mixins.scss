@@ -1,0 +1,18 @@
+// media query for various breakpoints
+@mixin mediaQuery($breakpoint) {
+    @if $breakpoint == s {
+        @media all and (min-width: map-get($breakpoints, 's')) {
+            @content;
+        }
+    } @else if $breakpoint == m {
+        @media all and (min-width: map-get($breakpoints, 'm')) {
+            @content;
+        }
+    } @else if $breakpoint == l {
+        @media all and (min-width: map-get($breakpoints, 'l')) {
+            @content;
+        }
+    } @else {
+        @error "breakpoint '#{$breakpoint}' does not exist";
+    }
+}
