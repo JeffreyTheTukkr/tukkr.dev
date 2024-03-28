@@ -1,5 +1,4 @@
 <script lang="ts">
-
 </script>
 
 <footer>
@@ -34,7 +33,8 @@
             justify-content: space-between;
             gap: 1rem;
 
-            > div, > nav {
+            > div,
+            > nav {
                 display: inherit;
                 flex-direction: column;
                 gap: 1rem;

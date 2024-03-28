@@ -1,11 +1,8 @@
 <script lang="ts">
-    
 </script>
 
 <header>
-    <div class="logo">
-        
-    </div>
+    <div class="logo"></div>
     <nav>
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -21,11 +18,10 @@
         justify-content: space-between;
         padding: 2rem 3rem;
         background-color: rgba(0, 0, 0, 0.6);
-        
+
         .logo {
-            
         }
-        
+
         nav {
             display: flex;
             flex-direction: row;

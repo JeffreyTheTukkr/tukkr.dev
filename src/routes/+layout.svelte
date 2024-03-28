@@ -1,7 +1,7 @@
 <script lang="ts">
     import '@/scss/global.scss';
-    
-    import HeaderLayout from '$lib/layout/header.svelte'
+
+    import HeaderLayout from '$lib/layout/header.svelte';
     import FooterLayout from '$lib/layout/footer.svelte';
 </script>
 
