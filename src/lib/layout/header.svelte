@@ -2,7 +2,11 @@
 </script>
 
 <header>
-    <div class="logo"></div>
+    <div class="logo">
+        <a href="/">
+            <img src="/logo.svg" alt="tukkr logo" height="44" />
+        </a>
+    </div>
     <nav>
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -16,7 +20,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 2rem 3rem;
+        align-items: center;
+        padding: 1.6rem 3rem;
         background-color: rgba(0, 0, 0, 0.6);
 
         .logo {
