@@ -17,6 +17,9 @@
     $: toggleMobileMenu = (): void => {
         mobileMenuActive = !mobileMenuActive;
     };
+
+    // hide mobile menu on page change
+    $: $page.url && (mobileMenuActive = false);
 </script>
 
 <svelte:window bind:scrollY />
