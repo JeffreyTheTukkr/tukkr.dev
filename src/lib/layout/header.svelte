@@ -1,12 +1,21 @@
 <script lang="ts">
     import {page} from "$app/stores";
 
+    // verify the current url pathname equals the menu href
     $: isCurrentPage = (path: string): boolean => {
         return $page.url.pathname === path
-    } 
+    }
+
+    // check the scroll state to decrease the header padding
+    let scrollY: number;
+    $: scrollOffsetClass = (): string|null => {
+        return scrollY > 1 ? 'scrolled' : null;
+    }
 </script>
 
-<header>
+<svelte:window bind:scrollY={scrollY} />
+
+<header class={scrollOffsetClass()}>
     <div class="logo">
         <a href="/">
             <img src="/logo.svg" alt="tukkr logo" height="40" />
@@ -30,8 +39,11 @@
         align-items: center;
         padding: 2rem;
         background-color: rgba(0, 0, 0, 0.6);
+        transition: padding 0.2s ease-in-out;
 
-        .logo {
+        // change padding if window is scrolled
+        &.scrolled {
+            padding: 1.2rem 2rem;
         }
 
         nav {
@@ -41,7 +53,7 @@
 
             a {
                 padding: 0.4rem;
-                
+
                 &.active {
                     font-weight: $font-weight-primary-medium;
                     color: #fff;
