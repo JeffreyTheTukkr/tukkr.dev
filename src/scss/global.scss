@@ -10,12 +10,16 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    
+    // fonts and families
     font-family: $font-family-primary;
     font-weight: $font-weight-primary-regular;
 
     // colors and backgrounds
     background-color: #111827;
-    background-image: linear-gradient(to bottom, #000, #111827);
+    background-image: linear-gradient(to bottom, #000000, #0f1623);
     color: #94a3b8;
 }
 
