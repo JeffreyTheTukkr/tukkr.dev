@@ -16,7 +16,7 @@ body {
     // colors and backgrounds
     background-color: #111827;
     background-image: linear-gradient(to bottom, #000, #111827);
-    color: #fff;
+    color: #94a3b8;
 }
 
 h1,
@@ -27,6 +27,7 @@ h5,
 h6 {
     font-family: $font-family-secondary;
     font-weight: $font-weight-secondary-bold;
+    color: #fff;
 }
 
 h1 {
@@ -48,6 +49,10 @@ h4 {
 a {
     text-decoration: none;
     color: inherit;
+    
+    &:hover {
+        color: #fff;
+    }
 }
 
 //
