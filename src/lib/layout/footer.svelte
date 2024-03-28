@@ -40,7 +40,7 @@
                 gap: 1rem;
             }
         }
-        
+
         .info .name {
             color: #fff;
         }

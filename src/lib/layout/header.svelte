@@ -1,19 +1,19 @@
 <script lang="ts">
-    import {page} from "$app/stores";
+    import { page } from '$app/stores';
 
     // verify the current url pathname equals the menu href
     $: isCurrentPage = (path: string): boolean => {
-        return $page.url.pathname === path
-    }
+        return $page.url.pathname === path;
+    };
 
     // check the scroll state to decrease the header padding
     let scrollY: number;
-    $: scrollOffsetClass = (): string|null => {
+    $: scrollOffsetClass = (): string | null => {
         return scrollY > 1 ? 'scrolled' : null;
-    }
+    };
 </script>
 
-<svelte:window bind:scrollY={scrollY} />
+<svelte:window bind:scrollY />
 
 <header class={scrollOffsetClass()}>
     <div class="logo">
