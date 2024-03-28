@@ -54,6 +54,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        will-change: padding;
         padding: 2rem;
         background-color: rgba(0, 0, 0, 0.84);
         transition: padding 0.2s ease-in-out;
@@ -76,11 +77,13 @@
 
             // svg layout and animation
             svg {
+                will-change: transform;
                 transition: transform 400ms;
                 user-select: none;
 
                 path {
                     fill: none;
+                    will-change: transform;
                     transition:
                         stroke-dasharray 400ms,
                         stroke-dashoffset 400ms;
