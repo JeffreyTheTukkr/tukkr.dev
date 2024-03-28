@@ -49,6 +49,7 @@ h4 {
 a {
     text-decoration: none;
     color: inherit;
+    transition: color .12s ease-in-out;
     
     &:hover {
         color: #fff;
