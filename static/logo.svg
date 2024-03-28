@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" color="#0496FF" viewBox="0 0 512 512">
+    <rect width="512" height="512" fill="transparent" paint-order="stroke" rx="256"/>
+    <svg xmlns="http://www.w3.org/2000/svg" display="inline-block" style="vertical-align:middle" viewBox="0 0 16 16">
+        <g fill="currentColor" fill-rule="evenodd" clip-rule="evenodd">
+            <path d="M5 2.41 5.78 2l9 6v.83L9 12.68v-1.2l4.6-3.06L6 3.35V7H5V2.41Z"/>
+            <path d="M6.13 12.12c-.18.18-.32.38-.42.6a1.74 1.74 0 0 0-.14.72v.86a.69.69 0 0 1-.21.5.7.7 0 0 1-.5.2H4a.7.7 0 0 1-.5-.2.7.7 0 0 1-.2-.5v-.86c0-.26-.05-.5-.15-.72a1.91 1.91 0 0 0-.42-.6 2.52 2.52 0 0 1-.54-.77 2.25 2.25 0 0 1-.19-.93 2.39 2.39 0 0 1 .33-1.22 2.4 2.4 0 0 1 .87-.87A2.47 2.47 0 0 1 4.43 8a2.41 2.41 0 0 1 1.23.33 2.41 2.41 0 0 1 1.2 2.1c0 .33-.06.63-.19.92a2.52 2.52 0 0 1-.54.77Zm-1.1 1h-1.2v1.18c0 .04.02.08.05.11.04.04.07.05.12.05h.86a.16.16 0 0 0 .12-.04.15.15 0 0 0 .05-.12v-1.19Z"/>
+        </g>
+    </svg>
+</svg>
