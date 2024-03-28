@@ -46,6 +46,8 @@
         }
 
         .info .name {
+            font-family: $font-family-secondary;
+            font-weight: $font-weight-secondary-bold;
             color: #fff;
         }
     }
