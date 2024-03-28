@@ -21,7 +21,7 @@
             <img src="/logo.svg" alt="tukkr logo" height="40" />
         </a>
     </div>
-    <nav>
+    <nav role="navigation" aria-label="Main menu">
         <a href="/" class:active={isCurrentPage('/')}>Home</a>
         <a href="/about" class:active={isCurrentPage('/about')}>About</a>
         <a href="/snippets" class:active={isCurrentPage('/snippets')}>Snippets</a>

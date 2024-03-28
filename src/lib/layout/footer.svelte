@@ -8,7 +8,7 @@
             <span><a href="mailto:info@tukkr.dev">info@tukkr.dev</a></span>
             <span><a href="/contact">More information</a></span>
         </div>
-        <nav>
+        <nav role="navigation" aria-label="Footer menu">
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/snippets">Snippets</a>
