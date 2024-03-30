@@ -20,10 +20,10 @@
 
     // hide mobile menu on page change
     $: $page.url && (mobileMenuActive = false);
-    
+
     // remove mobileMenuActive true state on mobile breakpoint
     let innerWidth: number;
-    $: innerWidth > 744 && (mobileMenuActive = false)
+    $: innerWidth > 744 && (mobileMenuActive = false);
 </script>
 
 <svelte:window bind:scrollY bind:innerWidth />
@@ -126,7 +126,9 @@
             width: 100%;
             height: 0;
             overflow: hidden;
-            transition: height 0.4s ease-in-out, margin-top 0.4s ease-in-out;
+            transition:
+                height 0.4s ease-in-out,
+                margin-top 0.4s ease-in-out;
 
             &.active {
                 height: 200px;
