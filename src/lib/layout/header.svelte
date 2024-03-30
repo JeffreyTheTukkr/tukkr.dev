@@ -130,7 +130,7 @@
             transition:
                 height 0.4s ease-in-out,
                 margin-top 0.4s ease-in-out;
-            
+
             &.active {
                 // note: height must be a fixed value for transition to work properly
                 // when adding or removing a menu item, recalculate the height
@@ -143,7 +143,7 @@
                 width: auto;
                 height: auto !important;
                 margin-top: 0 !important;
-                
+
                 // disable transition to prevent weird rescaling animations
                 transition: none;
             }
