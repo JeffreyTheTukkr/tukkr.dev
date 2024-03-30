@@ -20,9 +20,13 @@
 
     // hide mobile menu on page change
     $: $page.url && (mobileMenuActive = false);
+    
+    // remove mobileMenuActive true state on mobile breakpoint
+    let innerWidth: number;
+    $: innerWidth > 744 && (mobileMenuActive = false)
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY bind:innerWidth />
 
 <header class={scrollOffsetClass()}>
     <div class="logo">
@@ -116,21 +120,26 @@
 
         // navigation
         nav {
-            display: none;
+            display: flex;
             flex-direction: column;
             gap: 1rem;
-            margin-top: 2rem;
             width: 100%;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.4s ease-in-out, margin-top 0.4s ease-in-out;
 
             &.active {
-                display: flex;
+                height: 200px;
+                margin-top: 2rem;
             }
 
             @include mediaQuery(s) {
                 display: flex;
                 flex-direction: row;
                 width: auto;
-                margin-top: 0;
+                height: auto !important;
+                margin-top: 0 !important;
+                transition: none;
             }
 
             a {
