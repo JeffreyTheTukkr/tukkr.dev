@@ -60,7 +60,7 @@
         align-items: center;
         will-change: padding;
         padding: 2rem;
-        background-color: rgba(0, 0, 0, 0.84);
+        background-color: rgba(0, 0, 0, 0.9);
         transition: padding 0.2s ease-in-out;
 
         // change padding if window is scrolled
@@ -126,21 +126,25 @@
             width: 100%;
             height: 0;
             overflow: hidden;
+            margin-top: 0;
             transition:
                 height 0.4s ease-in-out,
                 margin-top 0.4s ease-in-out;
-
+            
             &.active {
+                // note: height must be a fixed value for transition to work properly
+                // when adding or removing a menu item, recalculate the height
                 height: 200px;
                 margin-top: 2rem;
             }
 
             @include mediaQuery(s) {
-                display: flex;
                 flex-direction: row;
                 width: auto;
                 height: auto !important;
                 margin-top: 0 !important;
+                
+                // disable transition to prevent weird rescaling animations
                 transition: none;
             }
 
