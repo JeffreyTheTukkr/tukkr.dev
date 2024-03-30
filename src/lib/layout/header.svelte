@@ -70,6 +70,7 @@
 
         // hamburger menu
         button {
+            padding: 0;
             background: none;
             border: none;
             cursor: pointer;
