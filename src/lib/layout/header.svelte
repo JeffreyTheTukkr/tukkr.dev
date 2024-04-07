@@ -91,7 +91,7 @@
                     transition:
                         stroke-dasharray 400ms,
                         stroke-dashoffset 400ms;
-                    stroke: #fff;
+                    stroke: $color-font-dark;
                     stroke-width: 5.5;
                     stroke-linecap: round;
                 }
