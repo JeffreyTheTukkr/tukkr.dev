@@ -15,5 +15,10 @@
     main {
         flex: 1;
         padding: clamp(8rem, 16vh, 16vh) 0;
+        line-height: 1.8;
+
+        :global(p) {
+            margin: 1em 0;
+        }
     }
 </style>
