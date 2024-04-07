@@ -14,7 +14,7 @@
 <style lang="scss">
     main {
         flex: 1;
-        padding: clamp(8rem, 16vh, 16vh) 0;
+        padding: clamp(6rem, 8vh, 10vh) 0;
         line-height: 1.8;
 
         :global(p) {
