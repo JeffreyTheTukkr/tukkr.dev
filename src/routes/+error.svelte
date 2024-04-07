@@ -1,11 +1,14 @@
 <script lang="ts">
     import { page } from '$app/stores';
+    import SEO from '$lib/components/seo.svelte';
 
     const status: number = $page.status;
     const errMsg: string = $page?.error?.message ? '- ' + $page.error.message : '';
     const path: string = $page.url.pathname;
     const timestamp: number = Date.now();
 </script>
+
+<SEO title={status + ' ' + errMsg} description="It looks like you found the error page!" index={false} follow={false} />
 
 <div class="container">
     <h1>{status} {errMsg}</h1>
