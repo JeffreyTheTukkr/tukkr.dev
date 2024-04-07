@@ -23,7 +23,7 @@
 
 <style lang="scss">
     footer {
-        background-color: #000;
+        background-color: #fff;
         padding: 3rem 0;
 
         // general layout
@@ -49,7 +49,7 @@
         .info .name {
             font-family: $font-family-secondary;
             font-weight: $font-weight-secondary-bold;
-            color: #fff;
+            color: $color-brand-primary;
         }
     }
 </style>

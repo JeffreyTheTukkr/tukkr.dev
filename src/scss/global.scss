@@ -19,9 +19,9 @@ body {
     font-weight: $font-weight-primary-regular;
 
     // colors and backgrounds
-    background-color: #111827;
-    background-image: linear-gradient(to bottom, #000000, #0f1623);
-    color: #94a3b8;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff, #fff8f8);
+    color: $color-font-primary;
 }
 
 h1,
@@ -32,7 +32,7 @@ h5,
 h6 {
     font-family: $font-family-secondary;
     font-weight: $font-weight-secondary-bold;
-    color: #fff;
+    color: $color-brand-primary;
 }
 
 h1 {
@@ -58,7 +58,7 @@ a {
 
     &:hover,
     &:focus {
-        color: #fff;
+        color: $color-font-dark;
     }
 }
 

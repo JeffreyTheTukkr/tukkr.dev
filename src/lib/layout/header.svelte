@@ -60,7 +60,7 @@
         align-items: center;
         will-change: padding;
         padding: 2rem;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(255, 255, 255, 0.9);
         transition: padding 0.2s ease-in-out;
 
         // change padding if window is scrolled
@@ -153,7 +153,7 @@
 
                 &.active {
                     font-weight: $font-weight-primary-medium;
-                    color: #fff;
+                    color: $color-font-dark;
                 }
             }
         }
