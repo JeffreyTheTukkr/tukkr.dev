@@ -34,10 +34,7 @@
         "vite": "^5.2.8"
     },
     "lint-staged": {
-        "*": [
-            "prettier --write . '!pnpm-lock.yaml'",
-            "git add"
-        ]
+        "*": ["prettier --write . '!pnpm-lock.yaml'"]
     },
     "type": "module"
 }
