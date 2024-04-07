@@ -31,7 +31,7 @@
 <header class={scrollOffsetClass()}>
     <div class="logo">
         <a href="/">
-            <img alt="tukkr logo" height="46" src="/logo.svg" />
+            <img alt="tukkr logo" height="44" src="/logo.svg" />
         </a>
     </div>
     <button aria-controls="main-menu" aria-expanded={mobileMenuActive ? 'true' : 'false'} aria-label="Toggle main menu" on:click={toggleMobileMenu}>
