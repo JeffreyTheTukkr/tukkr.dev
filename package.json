@@ -12,6 +12,9 @@
         "format": "prettier --write . '!pnpm-lock.yaml'",
         "prepare": "husky install"
     },
+    "dependencies": {
+        "mdsvex": "^0.11.0"
+    },
     "devDependencies": {
         "@sveltejs/adapter-auto": "^3.2.0",
         "@sveltejs/kit": "^2.5.8",
@@ -38,8 +41,5 @@
             "prettier --write . '!pnpm-lock.yaml'"
         ]
     },
-    "type": "module",
-    "dependencies": {
-        "mdsvex": "^0.11.0"
-    }
+    "type": "module"
 }
