@@ -59,6 +59,7 @@
             }
         }
 
+        // center the contact block
         .contact {
             margin: 0 auto;
         }
