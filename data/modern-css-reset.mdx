@@ -1,0 +1,99 @@
+---
+title: Modern CSS Reset for 2024
+publishedAt: '16-04-2024'
+summary: Do we still need those older and heavy CSS reset libraries, or is there a more modern, lightweight solution in 2024? Based on 2 great frontend developers, I've switched to a more modern version!
+---
+
+Since the beginning of my web development journey I have pretty much always used a CSS reset library like [normalize.css](https://github.com/necolas/normalize.css/), or even before that [meyerweb.com](https://meyerweb.com/eric/tools/css/reset/), however do we still need these in 2024 and isn't there a more modern version I wondered. Well, 2 great frontend developers, [Josh Comeau](https://www.joshwcomeau.com) and [Andy Bell](https://andy-bell.co.uk) have researched this individually and came to pretty much the same CSS reset values!
+
+Based on their results I've slightly refactored both of their code to be more inline with how I want my default styling to look like, and I have been using for a while now without issues.
+
+```scss
+/**
+ * custom css reset
+ *
+ * based on:
+ * - joshwcomeau.com/css/custom-css-reset/#digit-font-smoothing
+ * - andy-bell.co.uk/a-modern-css-reset
+ */
+
+// more-intuitive box sizing model
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// remove default margins
+* {
+    margin: 0;
+}
+
+// inherit viewport height
+html {
+    height: auto;
+}
+
+// minimum viewport height to allow for scrolling of content
+// and improved text rendering
+body {
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+// enable smooth scrolling
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+// avoid text overflows
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}
+
+// pass underline under glyphs
+a {
+    text-decoration-skip-ink: auto;
+}
+
+// inherit font on form elements
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+// improved media defaults
+img,
+picture,
+svg,
+canvas,
+video,
+audio {
+    display: block;
+    max-width: 100%;
+}
+
+// disable animations if browser preference is set
+@media (prefers-reduced-motion) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+```
+
+Read the article from Josh Comeau [here](https://www.joshwcomeau.com/css/custom-css-reset/).
+
+Read the article from Andy Bell [here](https://piccalil.li/blog/a-more-modern-css-reset/).
