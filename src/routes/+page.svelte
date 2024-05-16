@@ -8,17 +8,17 @@
     <h1>tukkr</h1>
     <p>Hey! I am Jeffrey, a Fullstack Web Developer from The Netherlands.</p>
     <div class="page-actions">
-        <a href="/about">
-            <div class="about">
-                <h2>About me</h2>
-                <p>Read more about me and my past experiences.</p>
-            </div>
+        <a href="/about" class="about">
+            <h2>About me</h2>
+            <p>Read more about me and my past experiences.</p>
         </a>
-        <a href="/snippets">
-            <div class="snippets">
-                <h2>Snippets</h2>
-                <p>The place where I store some cool snippets / knowledge.</p>
-            </div>
+        <a href="/snippets" class="snippets">
+            <h2>Snippets</h2>
+            <p>The place where I store some cool snippets / knowledge.</p>
+        </a>
+        <a href="/contact" class="contact">
+            <h2>Get in touch</h2>
+            <p>In for a friendly chat? Contact me directly!</p>
         </a>
     </div>
 </div>
@@ -28,6 +28,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 2rem;
         margin-top: 2rem;
 
@@ -36,6 +37,7 @@
         }
 
         > a {
+            width: 100%;
             padding: 1rem;
             border: 1px solid $color-border-primary;
             border-radius: 16px;
@@ -55,6 +57,10 @@
                 color: inherit;
                 font-size: inherit;
             }
+        }
+
+        .contact {
+            margin: 0 auto;
         }
     }
 </style>
