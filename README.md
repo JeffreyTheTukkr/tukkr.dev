@@ -5,7 +5,7 @@ Repository for the [tukkr.dev](https://tukkr.dev) website.
 **Requirements**
 
 ```
-nodejs   >= 20.12
+nodejs   >= 20.13
 ```
 
 **Quick commands**
