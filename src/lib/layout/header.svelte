@@ -82,15 +82,15 @@
             // svg layout and animation
             svg {
                 will-change: transform;
-                transition: transform 400ms;
+                transition: transform 0.4s;
                 user-select: none;
 
                 path {
                     fill: none;
                     will-change: transform;
                     transition:
-                        stroke-dasharray 400ms,
-                        stroke-dashoffset 400ms;
+                        stroke-dasharray 0.4s,
+                        stroke-dashoffset 0.4ms;
                     stroke: $color-font-dark;
                     stroke-width: 6;
                     stroke-linecap: round;
