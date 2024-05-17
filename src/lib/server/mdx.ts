@@ -29,8 +29,8 @@ export const getAllPosts = (): PostI[] => {
         } as PostI;
     });
 
-    // sort posts ascending from post date
-    return posts.sort((a: PostI, b: PostI) => a.date.getDate() - b.date.getDate());
+    // sort posts descending from post date
+    return posts.sort((a: PostI, b: PostI) => b.date.getTime() - a.date.getTime());
 };
 
 export const getPostBySlug = (slug: string): PostI => {
