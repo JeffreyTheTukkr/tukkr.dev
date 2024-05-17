@@ -1,10 +1,10 @@
-import { getAllPosts, type PostI } from '$lib/server/mdx';
+import { getAllSnippets, type PostI } from '$lib/server/mdx';
 import type { ServerLoad } from '@sveltejs/kit';
 
 export const load: ServerLoad = () => {
-    const allPosts: PostI[] = getAllPosts();
+    const allSnippets: PostI[] = getAllSnippets();
 
     return {
-        posts: allPosts
+        posts: allSnippets
     };
 };

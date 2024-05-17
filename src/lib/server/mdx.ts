@@ -11,8 +11,8 @@ export type PostI = {
     content: string;
 };
 
-export const getAllPosts = (): PostI[] => {
-    const directory: string = path.join(process.cwd(), 'data');
+export const getAllSnippets = (): PostI[] => {
+    const directory: string = path.join(process.cwd(), 'data/snippets');
     const files: string[] = fs.readdirSync(directory);
 
     const posts: PostI[] = files.map((file: string): PostI => {
@@ -33,8 +33,8 @@ export const getAllPosts = (): PostI[] => {
     return posts.sort((a: PostI, b: PostI) => b.date.getTime() - a.date.getTime());
 };
 
-export const getPostBySlug = (slug: string): PostI => {
-    const directory: string = path.join(process.cwd(), 'data');
+export const getSnippetBySlug = (slug: string): PostI => {
+    const directory: string = path.join(process.cwd(), 'data/snippets');
     const filePath: string = path.join(directory, slug + '.mdx');
     const fileContents: string = fs.readFileSync(filePath, 'utf-8');
     const { content, data } = matter(fileContents);
