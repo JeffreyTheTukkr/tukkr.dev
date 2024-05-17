@@ -3,6 +3,8 @@
     import type { PageData } from './$types';
 
     export let data: PageData;
+
+    /* eslint svelte/no-at-html-tags: "off" */
 </script>
 
 <SEO title={data.post.title} description={data.post.description} />
