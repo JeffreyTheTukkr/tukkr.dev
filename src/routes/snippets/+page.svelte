@@ -62,6 +62,11 @@
                     font-style: italic;
                 }
             }
+
+            // remove bottom margin to have equal distance between elements
+            p {
+                margin-bottom: 0;
+            }
         }
     }
 </style>
