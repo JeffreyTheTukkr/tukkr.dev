@@ -1,4 +1,4 @@
-import { getAllPosts, type PostI } from '$lib/server/mdx';
+import { getAllSnippets, type PostI } from '$lib/server/mdx';
 
 const site: string = 'https://tukkr.dev';
 const pages: string[] = [];
@@ -8,7 +8,7 @@ export async function GET(): Promise<Response> {
     ['', '/about', '/snippets', '/contact'].map((item: string) => pages.push(item));
 
     // append dynamic snippet pages to sitemap
-    const snippets: PostI[] = getAllPosts();
+    const snippets: PostI[] = getAllSnippets();
     snippets.map((item: PostI) => pages.push('/snippets/' + item.slug));
 
     return new Response(
