@@ -15,6 +15,12 @@ const config = {
 
         alias: {
             '@/*': './src'
+        },
+
+        csp: {
+            directives: {
+                'script-src': ['self']
+            }
         }
     }
 };
