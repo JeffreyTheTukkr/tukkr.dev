@@ -1,11 +1,11 @@
 import type { ServerLoad } from '@sveltejs/kit';
-import { getSnippetBySlug, type PostI } from '$lib/server/mdx';
+import { getSnippetBySlug, type SnippetI } from '$lib/server/mdx';
 import { compile } from 'mdsvex';
 
-export const load: ServerLoad = async ({ url }): Promise<{ post: PostI }> => {
+export const load: ServerLoad = async ({ url }): Promise<{ post: SnippetI }> => {
     // retrieves the second string path part after `/` to match the mdx filename
     const lastPath: string = url.pathname.split('/')[2];
-    const post: PostI = getSnippetBySlug(lastPath);
+    const post: SnippetI = getSnippetBySlug(lastPath);
     const content = await compile(post.content, {
         highlight: { highlighter }
     });
