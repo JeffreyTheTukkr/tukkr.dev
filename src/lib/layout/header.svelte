@@ -3,7 +3,7 @@
 
     // verify the current url pathname equals the menu href
     $: isCurrentPage = (path: string): boolean => {
-        return $page.url.pathname === path;
+        return $page.url.pathname.split('/')[1] === path;
     };
 
     // check the scroll state to decrease the header padding
@@ -42,10 +42,10 @@
         </svg>
     </button>
     <nav aria-label="Main menu" class:active={mobileMenuActive} id="main-menu">
-        <a class:active={isCurrentPage('/')} href="/">Home</a>
-        <a class:active={isCurrentPage('/about')} href="/about">About</a>
-        <a class:active={isCurrentPage('/snippets')} href="/snippets">Snippets</a>
-        <a class:active={isCurrentPage('/contact')} href="/contact">Contact</a>
+        <a class:active={isCurrentPage('')} href="/">Home</a>
+        <a class:active={isCurrentPage('about')} href="/about">About</a>
+        <a class:active={isCurrentPage('snippets')} href="/snippets">Snippets</a>
+        <a class:active={isCurrentPage('contact')} href="/contact">Contact</a>
     </nav>
 </header>
 
