@@ -22,7 +22,7 @@ export const getAllPosts = (): PostI[] => {
 
         return {
             title: data['title'],
-            slug: data['slug'],
+            slug: file.slice(0, -4),
             date: parseDate(data['publishedAt']),
             description: data['description'],
             content: content
