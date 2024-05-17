@@ -11,25 +11,29 @@
 
 <div class="container">
     <h1>{data.post.title}</h1>
-    {@html data.post.content}
+    <div class="content">
+        {@html data.post.content}
+    </div>
 </div>
 
 <style lang="scss">
-    :global(a) {
-        color: $color-brand-primary;
-
-        &:hover {
+    .content {
+        :global(a) {
             color: $color-brand-primary;
-        }
-    }
 
-    :global(pre) {
-        font-size: 14px;
-        line-height: 1.4;
-        padding: 1rem;
-        background-color: #fff;
-        border: 1px solid $color-border-primary;
-        border-radius: 1rem;
-        overflow-x: scroll;
+            &:hover {
+                color: $color-brand-primary;
+            }
+        }
+
+        :global(pre) {
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 1rem;
+            background-color: #fff;
+            border: 1px solid $color-border-primary;
+            border-radius: 1rem;
+            overflow-x: scroll;
+        }
     }
 </style>
