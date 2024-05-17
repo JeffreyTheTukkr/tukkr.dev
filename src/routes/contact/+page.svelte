@@ -13,7 +13,7 @@
             <p><b>Name:</b> tukkr</p>
             <p><b>Coc:</b> 92668828</p>
             <p><b>Vat:</b> NL004968891B61</p>
-            <p><b>Address:</b><br />De Dorsmolen 47<br />7623HT Borne<br />The Nethelands</p>
+            <p><b>Address:</b><br />De Dorsmolen 47<br />7623HT Borne<br />The Netherlands</p>
         </div>
         <div class="contact">
             <h2><b>Contact details</b></h2>
