@@ -22,7 +22,7 @@
             color: $color-brand-primary;
 
             &:hover {
-                color: $color-brand-primary;
+                color: darken($color-brand-primary, 6%);
             }
         }
 
