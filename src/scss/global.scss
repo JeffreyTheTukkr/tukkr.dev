@@ -65,7 +65,12 @@ a {
 }
 
 ul {
-    padding-left: 32px;
+    padding-left: 16px;
+    transition: padding-left $animation-duration-default ease-in-out;
+
+    @include mediaQuery(s) {
+        padding-left: 32px;
+    }
 }
 
 //
