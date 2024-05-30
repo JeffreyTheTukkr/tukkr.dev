@@ -45,11 +45,7 @@
 <style lang="scss">
     .container {
         :global(a) {
-            color: $color-brand-primary;
-
-            &:hover {
-                color: darken($color-brand-primary, 6%);
-            }
+            @include contentAnchorStyling;
         }
     }
 </style>

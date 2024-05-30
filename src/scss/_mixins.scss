@@ -16,3 +16,14 @@
         @error "breakpoint '#{$breakpoint}' does not exist";
     }
 }
+
+// anchor styling for the content blocks where the links should be red
+@mixin contentAnchorStyling {
+    color: $color-brand-primary;
+    transition: color $animation-duration-default ease-in-out;
+
+    &:hover,
+    &:focus {
+        color: darken($color-brand-primary, 10%);
+    }
+}
