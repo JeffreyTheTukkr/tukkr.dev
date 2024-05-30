@@ -82,9 +82,11 @@
 
             // svg layout and animation
             svg {
-                will-change: transform;
-                transition: transform 0.4s;
                 user-select: none;
+                will-change: transform;
+                transition:
+                    transform 0.4s ease-in-out,
+                    stroke-dashoffset 0.4s ease-in-out;
 
                 path {
                     fill: none;
