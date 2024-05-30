@@ -19,11 +19,22 @@
 
 // anchor styling for the content blocks where the links should be red
 @mixin contentAnchorStyling {
+    position: relative;
     color: $color-brand-primary;
     transition: color $animation-duration-default ease-in-out;
 
-    &:hover,
-    &:focus {
-        color: darken($color-brand-primary, 10%);
+    &:before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 2px;
+        background-color: $color-brand-primary;
+        transform: scaleX(0);
+        transition: transform $animation-duration-default ease-in-out;
+    }
+
+    &:hover::before {
+        transform: scale(1);
     }
 }
