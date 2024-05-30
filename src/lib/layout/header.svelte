@@ -60,7 +60,7 @@
         align-items: center;
         will-change: padding;
         padding: 1.8rem 2rem;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.94);
         transition: padding 0.2s ease-in-out;
         z-index: 999;
 
