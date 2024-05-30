@@ -85,15 +85,15 @@
                 user-select: none;
                 will-change: transform;
                 transition:
-                    transform 0.4s ease-in-out,
-                    stroke-dashoffset 0.4s ease-in-out;
+                    transform $animation-duration-slow ease-in-out,
+                    stroke-dashoffset $animation-duration-slow ease-in-out;
 
                 path {
                     fill: none;
                     will-change: transform;
                     transition:
-                        stroke-dasharray 0.4s,
-                        stroke-dashoffset 0.4ms;
+                        stroke-dasharray $animation-duration-slow,
+                        stroke-dashoffset $animation-duration-slow;
                     stroke: $color-font-dark;
                     stroke-width: 6;
                     stroke-linecap: round;
@@ -131,8 +131,8 @@
             overflow: hidden;
             margin-top: 0;
             transition:
-                height 0.4s ease-in-out,
-                margin-top 0.4s ease-in-out;
+                height $animation-duration-slow ease-in-out,
+                margin-top $animation-duration-slow ease-in-out;
 
             &.active {
                 // note: height must be a fixed value for transition to work properly
