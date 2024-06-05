@@ -37,8 +37,8 @@
     <button aria-controls="main-menu" aria-expanded={mobileMenuActive ? 'true' : 'false'} aria-label="Toggle main menu" on:click={toggleMobileMenu}>
         <svg class:active={mobileMenuActive} viewBox="0 0 100 100" width="42" height="42">
             <path d="m 70,32 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
-            <path d="m 70,51 h -40" />
-            <path d="m 30,66 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+            <path d="m 70,49 h -40" />
+            <path d="m 30,66 h 40 c 0,0 8.5,0.15 8.5,-8.5 0,-8.65 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
         </svg>
     </button>
     <nav aria-label="Main menu" class:active={mobileMenuActive} id="main-menu">
@@ -83,17 +83,13 @@
             // svg layout and animation
             svg {
                 user-select: none;
-                will-change: transform;
+                will-change: transform, stroke-dashoffset;
                 transition:
                     transform $animation-duration-slow ease-in-out,
                     stroke-dashoffset $animation-duration-slow ease-in-out;
 
                 path {
                     fill: none;
-                    will-change: transform;
-                    transition:
-                        stroke-dasharray $animation-duration-slow,
-                        stroke-dashoffset $animation-duration-slow;
                     stroke: $color-font-dark;
                     stroke-width: 6;
                     stroke-linecap: round;
