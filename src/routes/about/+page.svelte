@@ -9,7 +9,10 @@
     const careerYears: number = Math.ceil((Date.now() - new Date('2020').getTime()) / (365 * 24 * 60 * 60 * 1000));
 </script>
 
-<SEO title="About me" description="" />
+<SEO
+    title="About me"
+    description="Hi! I am Jeffrey, a 27-year-old fullstack web developer from the Netherlands with a passion for transforming technical challenges into user-friendly solutions. With 5 years of professional experience, I specializes in creating practical, innovative web applications"
+/>
 
 <div class="container">
     <h1>About me</h1>
