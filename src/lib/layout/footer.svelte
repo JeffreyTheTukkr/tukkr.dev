@@ -12,8 +12,8 @@
             <a href="/contact">Contact</a>
         </nav>
         <div class="socials">
-            <a href="https://www.linkedin.com/in/jeffrey-boesenkool/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/JeffreyTheTukkr" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/jeffrey-boesenkool/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/JeffreyTheTukkr" target="_blank" rel="noopener">GitHub</a>
         </div>
     </div>
 </footer>
