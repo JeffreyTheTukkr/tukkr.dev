@@ -14,14 +14,15 @@
 <div class="container">
     <h1>About me</h1>
     <p>
-        Hi! I am Jeffrey, a {age} year old enthusiastic fullstack web developer from the Netherlands. From a young age I have been interested in transforming technical issues and wishes
-        to viable user-friendly solutions, and roughly {careerYears} years ago I was lucky enough to start doing this professionally!
+        Hi! I am Jeffrey, a {age} year old enthusiastic fullstack web developer from the Netherlands. From an early age I've been passionate about converting technical challenges into
+        practical, user-friendly solutions, and roughly {careerYears} years ago I was fortunate to turn this passion into a professional career!
     </p>
-
     <p>
-        In these {careerYears} years I have worked on, and in, various projects and teams. Ranging from custom WordPress themes and plugins to full fledged custom client portals and
-        ecommerce systems.
+        During these years I have contributed to a wide range of projects and teams. My experience spans developing custom WordPress themes and plugins, to creating comprehensive
+        client portals and e-commerce systems tailored to specific business needs. Currently, I am embracing the flexibility of freelancing, which allows me to apply my skills and
+        values to diverse projects.
     </p>
+    <p>If you're seeking a dedicated and experienced developer to enhance your team or project, I would be thrilled to explore how I can contribute to your success!</p>
 
     <h2>Technical experience</h2>
     <p>
@@ -35,7 +36,6 @@
         <li><b>CI/CD:</b> Jenkins, Github Actions, Docker, Podman.</li>
         <li><b>Hosting:</b> Debian and RHEL based distributions, Plesk, DirectAdmin, WHM.</li>
     </ul>
-
     <p>
         Please note that these are only the technologies I am most confident in, I have worked with other stacks and technologies so feel free to <a href="/contact">reach out</a> to
         me for a friendly chat!
