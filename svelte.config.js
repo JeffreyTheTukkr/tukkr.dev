@@ -19,7 +19,7 @@ const config = {
 
         csp: {
             directives: {
-                'script-src': ['self']
+                'script-src': ['self', 'https://umami.tukkr.xyz']
             }
         }
     }
