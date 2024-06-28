@@ -12,11 +12,10 @@ export type SnippetI = {
 };
 
 export const getAllSnippets = (): SnippetI[] => {
-    const directory: string = path.join(process.cwd(), 'data/snippets');
-    const files: string[] = fs.readdirSync(directory);
+    const files: string[] = fs.readdirSync('data/snippets');
 
     const posts: SnippetI[] = files.map((file: string): SnippetI => {
-        const filePath: string = path.join(directory, file);
+        const filePath: string = path.join('data/snippets', file);
         const fileContents: string = fs.readFileSync(filePath, 'utf-8');
         const { content, data } = matter(fileContents);
 
@@ -34,8 +33,7 @@ export const getAllSnippets = (): SnippetI[] => {
 };
 
 export const getSnippetBySlug = (slug: string): SnippetI => {
-    const directory: string = path.join(process.cwd(), 'data/snippets');
-    const filePath: string = path.join(directory, slug + '.mdx');
+    const filePath: string = path.join('data/snippets', slug + '.mdx');
     const fileContents: string = fs.readFileSync(filePath, 'utf-8');
     const { content, data } = matter(fileContents);
 
