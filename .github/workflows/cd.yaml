@@ -22,8 +22,8 @@ jobs:
       - name: generate .env file
         run: |
           touch .env
-          echo UMAMI_SCRIPT_URL=${{ vars.PUBLIC_UMAMI_SCRIPT_URL }} >> .env
-          echo UMAMI_WEBSITE_ID=${{ vars.PUBLIC_UMAMI_WEBSITE_ID }} >> .env
+          echo VITE_UMAMI_SCRIPT_URL=${{ vars.VITE_UMAMI_SCRIPT_URL }} >> .env
+          echo VITE_UMAMI_WEBSITE_ID=${{ vars.VITE_UMAMI_WEBSITE_ID }} >> .env
       - name: build project
         run: pnpm build
       - name: copy files to server
