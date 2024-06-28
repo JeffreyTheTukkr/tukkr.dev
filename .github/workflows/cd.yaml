@@ -19,6 +19,11 @@ jobs:
           version: 8
       - name: install dependencies
         run: pnpm install
+      - name: generate .env file
+        run: |
+          touch .env
+          echo UMAMI_SCRIPT_URL=${{ env.PUBLIC_UMAMI_SCRIPT_URL }} >> .env
+          echo UMAMI_WEBSITE_ID=${{ env.PUBLIC_UMAMI_WEBSITE_ID }} >> .env
       - name: build project
         run: pnpm build
       - name: copy files to server
