@@ -21,9 +21,9 @@
         practical, user-friendly solutions, and roughly {careerYears} years ago I was fortunate to turn this passion into a professional career!
     </p>
     <p>
-        During these years I have contributed to a wide range of projects and teams. My experience spans developing custom WordPress themes and plugins, to creating comprehensive
-        client portals and e-commerce systems tailored to specific business needs. Currently, I am embracing the flexibility of freelancing, which allows me to apply my skills and
-        values to diverse projects.
+        During these years I have contributed to a wide range of projects and teams. My experience spans from developing custom WordPress themes and plugins, to creating
+        comprehensive client portals and e-commerce systems tailored to specific business needs. Currently, I am embracing the flexibility of freelancing, which allows me to apply
+        my skills and values to diverse projects.
     </p>
     <p>If you're seeking a dedicated and experienced developer to enhance your team or project, I would be thrilled to explore how I can contribute to your success!</p>
 
