@@ -25,4 +25,8 @@
     <meta property="og:url" content={url} />
     <meta property="og:type" content={type} />
     <meta property="og:locale" content="en" />
+
+    {#if import.meta.env.APP_ENV !== 'development'}
+        <script defer src={import.meta.env.PUBLIC_UMAMI_SCRIPT_URL} data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}></script>
+    {/if}
 </svelte:head>
