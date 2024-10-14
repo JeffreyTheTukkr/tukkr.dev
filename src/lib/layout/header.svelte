@@ -18,8 +18,8 @@
         mobileMenuActive = !mobileMenuActive;
     };
 
-    // hide mobile menu on page change
-    $: $page.url && (mobileMenuActive = false);
+    // hide mobile menu on page url change
+    $: mobileMenuActive = $page.url ? false : mobileMenuActive;
 
     // remove mobileMenuActive true state on mobile breakpoint
     let innerWidth: number;
