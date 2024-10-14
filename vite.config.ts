@@ -5,11 +5,13 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
+                api: 'modern',
+
                 // required for (global) variables and mixins to work
                 // within `.svelte` files
                 additionalData: `
-                    @import './src/scss/variables';
-                    @import './src/scss/mixins';               
+                    @import '/src/scss/variables';
+                    @import '/src/scss/mixins';               
                 `
             }
         }
