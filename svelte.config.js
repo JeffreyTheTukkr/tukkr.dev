@@ -19,7 +19,7 @@ const config = {
 
         csp: {
             directives: {
-                'script-src': ['self', 'https://umami.tukkr.cloud']
+                'script-src': ['self', 'https://www.googletagmanager.com/gtag/js']
             }
         }
     }
