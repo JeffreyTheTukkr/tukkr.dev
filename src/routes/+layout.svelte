@@ -1,5 +1,6 @@
 <script lang="ts">
     import '@/scss/global.scss';
+    import Analytics from '$lib/components/analytics.svelte';
 
     import HeaderLayout from '$lib/layout/header.svelte';
     import FooterLayout from '$lib/layout/footer.svelte';
@@ -9,6 +10,7 @@
 <main>
     <slot />
 </main>
+<svelte:component this={Analytics} />
 <svelte:component this={FooterLayout} />
 
 <style lang="scss">
