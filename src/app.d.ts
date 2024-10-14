@@ -8,6 +8,14 @@ declare global {
         // interface PageState {}
         // interface Platform {}
     }
+
+    // support Google Analytics interface in Window type
+    declare interface Window {
+        dataLayer: IArguments[];
+
+        /* eslint-disable @typescript-eslint/no-explicit-any */
+        gtag?: (...args: any[]) => void;
+    }
 }
 
 export {};
