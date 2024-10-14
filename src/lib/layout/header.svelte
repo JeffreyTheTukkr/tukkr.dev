@@ -23,7 +23,7 @@
 
     // remove mobileMenuActive true state on mobile breakpoint
     let innerWidth: number;
-    $: innerWidth > 744 && (mobileMenuActive = false);
+    $: mobileMenuActive = innerWidth > 744 ? false : mobileMenuActive;
 </script>
 
 <svelte:window bind:scrollY bind:innerWidth />
