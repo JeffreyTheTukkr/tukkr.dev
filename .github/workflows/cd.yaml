@@ -24,8 +24,7 @@ jobs:
       - name: generate .env file
         run: |
           touch .env
-          echo VITE_UMAMI_SCRIPT_URL=${{ vars.VITE_UMAMI_SCRIPT_URL }} >> .env
-          echo VITE_UMAMI_WEBSITE_ID=${{ vars.VITE_UMAMI_WEBSITE_ID }} >> .env
+          echo PUBLIC_GA4_ID="${{ vars.GA4_ID }}" >> .env
       - name: build project
         run: pnpm build
       - name: copy files to server
