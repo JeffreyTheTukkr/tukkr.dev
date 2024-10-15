@@ -72,16 +72,19 @@
                 width: 100%;
                 margin-top: 0.5rem;
                 background-color: $color-brand-primary;
-                border: none;
                 color: #fff;
                 padding: 0.6rem;
-                border-radius: 0.8rem;
+                border: 2px solid $color-brand-primary;
+                border-radius: 0.6rem;
                 font-weight: $font-weight-primary-medium;
                 cursor: pointer;
+                transition:
+                    background-color $animation-duration-default ease-in-out,
+                    color $animation-duration-default ease-in-out;
 
-                // todo: add hover animation
                 &:hover {
-                    font-weight: 700;
+                    color: $color-brand-primary;
+                    background-color: #fff;
                 }
             }
         }
