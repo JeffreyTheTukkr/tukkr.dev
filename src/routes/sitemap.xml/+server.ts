@@ -5,7 +5,7 @@ const pages: string[] = [];
 
 export async function GET(): Promise<Response> {
     // append static pages to sitemap
-    ['', '/about', '/snippets', '/contact'].map((item: string) => pages.push(item));
+    ['', '/about', '/snippets', '/contact', '/privacy-policy'].map((item: string) => pages.push(item));
 
     // append dynamic snippet pages to sitemap
     const snippets: SnippetI[] = getAllSnippets();
