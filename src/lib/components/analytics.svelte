@@ -27,7 +27,11 @@
     <div class="cookie-consent">
         <div class="container">
             <span>Cookie notice</span>
-            <p>This website uses cookies to improve your user experience. By using our website, you consent to all cookies in accordance with our cookie policy.</p>
+            <p>
+                This website uses cookies to improve your user experience. By using our website, you consent to all cookies in accordance with our <a href="/privacy-policy"
+                    >privacy policy</a
+                >.
+            </p>
             <div class="buttons">
                 <button on:click={() => (cookiesAllowedByUser = false)}>Decline</button>
                 <button on:click={() => (cookiesAllowedByUser = true)}>Allow</button>
