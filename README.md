@@ -18,3 +18,9 @@ pnpm preview   preview the build
 pnpm lint      verify no linting issues exist
 pnpm format    fix linting issues
 ```
+
+**Dotenv file**
+
+```
+PUBLIC_GA4_ID="GA4_ID_CODE"
+```
