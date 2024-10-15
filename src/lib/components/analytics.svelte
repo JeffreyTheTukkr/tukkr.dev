@@ -17,10 +17,7 @@
 </script>
 
 <svelte:head>
-    {#if cookiesAllowedByUser === true}
-        <script async src="https://www.googletagmanager.com/gtag/js?id={PUBLIC_GA4_ID}" nonce="%svelktekit.nonce%">
-        </script>
-    {/if}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={PUBLIC_GA4_ID}" nonce="%svelktekit.nonce%"></script>
 </svelte:head>
 
 {#if cookiesAllowedByUser === undefined}
