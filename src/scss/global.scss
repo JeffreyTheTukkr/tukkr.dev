@@ -1,7 +1,7 @@
-@import 'reset';
-@import 'fonts';
-@import 'variables';
-@import 'mixins';
+@use 'reset' as *;
+@use 'fonts' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
 
 //
 // html elements

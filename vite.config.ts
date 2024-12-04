@@ -10,8 +10,8 @@ export default defineConfig({
                 // required for (global) variables and mixins to work
                 // within `.svelte` files
                 additionalData: `
-                    @import '/src/scss/variables';
-                    @import '/src/scss/mixins';               
+                    @use '/src/scss/variables' as *;
+                    @use '/src/scss/mixins' as *;
                 `
             }
         }
