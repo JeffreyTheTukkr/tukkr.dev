@@ -11,8 +11,27 @@
         window.gtag = function gtag(): void {
             window.dataLayer.push(arguments);
         };
+
+        // set consent to denied by default
+        window.gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied'
+        });
+
+        // initialize analytics
         window.gtag('js', new Date());
         window.gtag('config', PUBLIC_GA4_ID);
+    }
+
+    $: if (cookiesAllowedByUser && window.gtag) {
+        window.gtag('consent', 'update', {
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted',
+            analytics_storage: 'granted'
+        });
     }
 </script>
 
