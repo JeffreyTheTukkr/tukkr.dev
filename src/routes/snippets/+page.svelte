@@ -5,7 +5,7 @@
     export let data: PageData;
 </script>
 
-<SEO title="Snippets" description="Collection of neat pieces of code or specific knowledge which I found worth sharing - or storing." />
+<SEO title="Snippets" description="Collection of neat pieces of code or specific knowledge which I find worth sharing - or storing." />
 
 <div class="container">
     <h1>Snippets</h1>
