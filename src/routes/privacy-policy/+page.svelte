@@ -40,6 +40,13 @@
         policies of these websites may differ from our own.
     </p>
 
+    <h2>Error tracking</h2>
+    <p>
+        We use Sentry, a third-party service, to monitor and track errors that occur on our website. This allows us to improve the website's performance and user experience by
+        identifying and fixing bugs. Sentry may collect certain technical information, such as device type, operating system, and error details, but this information is used solely
+        for error tracking purposes and is not used to personally identify you.
+    </p>
+
     <h2>Security</h2>
     <p>
         The security of your personal information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100%
