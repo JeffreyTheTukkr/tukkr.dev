@@ -24,7 +24,10 @@ jobs:
       - name: generate .env file
         run: |
           touch .env
+          echo APP_ENV="production" >> .env
           echo PUBLIC_GA4_ID="${{ vars.GA4_ID }}" >> .env
+          echo PUBLIC_SENTRY_DSN="${{ vars.PUBLIC_SENTRY_DSN }}" >> .env
+          echo SENTRY_AUTH_TOKEN="${{ secrets.SENTRY_AUTH_TOKEN }}" >> .env
       - name: build project
         run: pnpm build
       - name: copy files to server
