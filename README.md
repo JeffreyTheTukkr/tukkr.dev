@@ -22,5 +22,8 @@ pnpm format    fix linting issues
 **Dotenv file**
 
 ```
-PUBLIC_GA4_ID="GA4_ID_CODE"
+APP_ENV="__APP_ENV__"
+PUBLIC_GA4_ID="__GA4_ID__"
+SENTRY_DSN="__SENTRY_DSN__"
+SENTRY_AUTH_TOKEN="__SENTRY_AUTH__"
 ```
