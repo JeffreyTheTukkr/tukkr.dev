@@ -2,21 +2,15 @@
     import { page } from '$app/stores';
 
     // verify the current url pathname equals the menu href
-    $: isCurrentPage = (path: string): boolean => {
-        return $page.url.pathname.split('/')[1] === path;
-    };
+    $: isCurrentPage = (path: string): boolean => $page.url.pathname.split('/')[1] === path;
 
     // check the scroll state to decrease the header padding
     let scrollY: number;
-    $: scrollOffsetClass = (): string | null => {
-        return scrollY > 1 ? 'scrolled' : null;
-    };
+    $: scrollOffsetClass = (): string | null => (scrollY > 1 ? 'scrolled' : null);
 
     // toggle mobile menu state
     let mobileMenuActive: boolean;
-    $: toggleMobileMenu = (): void => {
-        mobileMenuActive = !mobileMenuActive;
-    };
+    $: toggleMobileMenu = (): boolean => (mobileMenuActive = !mobileMenuActive);
 
     // hide mobile menu on page url change
     $: if ($page.url) mobileMenuActive = false;
