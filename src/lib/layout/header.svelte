@@ -19,13 +19,11 @@
     };
 
     // hide mobile menu on page url change
-    // eslint-disable-next-line
-    $: $page.url && (mobileMenuActive = false);
+    $: if ($page.url) mobileMenuActive = false;
 
     // remove mobileMenuActive true state on mobile breakpoint
     let innerWidth: number;
-    // eslint-disable-next-line
-    $: innerWidth > 744 && (mobileMenuActive = false);
+    $: if (innerWidth > 744) mobileMenuActive = false;
 </script>
 
 <svelte:window bind:scrollY bind:innerWidth />
