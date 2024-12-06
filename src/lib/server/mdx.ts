@@ -17,14 +17,13 @@ export const getAllSnippets = (): SnippetI[] => {
     const posts: SnippetI[] = files.map((file: string): SnippetI => {
         const filePath: string = path.join('data/snippets', file);
         const fileContents: string = fs.readFileSync(filePath, 'utf-8');
-        const { content, data } = matter(fileContents);
+        const { data } = matter(fileContents);
 
         return {
             title: data['title'],
             slug: file.slice(0, -4),
             date: parseDate(data['publishedAt']),
-            description: data['description'],
-            content: content
+            description: data['description']
         } as SnippetI;
     });
 
