@@ -1,10 +1,10 @@
 import { sequence } from '@sveltejs/kit/hooks';
 import { handleErrorWithSentry, sentryHandle } from '@sentry/sveltekit';
 import * as Sentry from '@sentry/sveltekit';
-import { SENTRY_DSN } from '$env/static/private';
+import { PUBLIC_SENTRY_DSN } from '$env/static/public';
 
 Sentry.init({
-    dsn: SENTRY_DSN,
+    dsn: PUBLIC_SENTRY_DSN,
 
     tracesSampleRate: 1.0
 
