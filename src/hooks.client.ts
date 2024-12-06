@@ -1,4 +1,4 @@
-import { handleErrorWithSentry, replayIntegration } from '@sentry/sveltekit';
+import { handleErrorWithSentry } from '@sentry/sveltekit';
 import * as Sentry from '@sentry/sveltekit';
 import { PUBLIC_SENTRY_DSN } from '$env/static/public';
 
@@ -16,7 +16,7 @@ Sentry.init({
     replaysOnErrorSampleRate: 1.0,
 
     // If you don't want to use Session Replay, just remove the line below:
-    integrations: [replayIntegration()]
+    integrations: []
 });
 
 // If you have a custom error handler, pass it to `handleErrorWithSentry`
