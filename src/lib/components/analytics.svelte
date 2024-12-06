@@ -6,7 +6,7 @@
     let cookiesAllowedByUser: boolean;
 
     // enable Google Analytics integration
-    $: if (browser && cookiesAllowedByUser) {
+    $: if (browser) {
         window.dataLayer = window.dataLayer || [];
         window.gtag = function gtag(): void {
             window.dataLayer.push(arguments);
@@ -25,6 +25,7 @@
         window.gtag('config', PUBLIC_GA4_ID);
     }
 
+    // set Google Analytics consent to granted when cookies are allowed
     $: if (cookiesAllowedByUser && window.gtag) {
         window.gtag('consent', 'update', {
             ad_storage: 'granted',
