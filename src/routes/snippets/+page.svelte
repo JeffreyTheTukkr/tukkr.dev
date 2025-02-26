@@ -11,8 +11,8 @@
     <h1>Snippets</h1>
     <p>While I'm not big on blog writing, I do occasionally come across some neat pieces of code or specific knowledge which I find worth sharing - <i>or storing</i>.</p>
     <div class="posts">
-        {#each data.posts as post}
-            <a href={'/snippets/' + post.slug} class="post">
+        {#each data.posts as post (post.date)}
+            <a href={'/snippets/' + post.slug} class="post>">
                 <div class="title">
                     <h2>{post.title}</h2>
                     <span>{post.date.toLocaleDateString('en-GB')}</span>
