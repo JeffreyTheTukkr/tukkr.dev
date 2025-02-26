@@ -6,7 +6,7 @@
     let cookiesAllowedByUser: boolean;
 
     // enable Google Analytics integration
-    $: if (browser) {
+    if (browser) {
         window.dataLayer = window.dataLayer || [];
         window.gtag = function gtag(): void {
             window.dataLayer.push(arguments);
