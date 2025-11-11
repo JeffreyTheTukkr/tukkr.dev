@@ -19,7 +19,7 @@ const config = {
 
         csp: {
             directives: {
-                'script-src': ['self', 'https://www.googletagmanager.com', 'https://*.ingest.us.sentry.io']
+                'script-src': ['self', 'https://www.googletagmanager.com']
             }
         }
     }
