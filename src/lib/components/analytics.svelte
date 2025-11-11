@@ -1,5 +1,6 @@
 <script lang="ts">
     import { browser } from '$app/environment';
+    import { resolve } from '$app/paths';
     import { PUBLIC_GA4_ID } from '$env/static/public';
 
     // locally store if a user has allowed the usage of cookies
@@ -45,8 +46,8 @@
         <div class="container">
             <span>Cookie notice</span>
             <p>
-                This website uses cookies to improve your user experience. By using our website, you consent to all cookies in accordance with our <a href="/privacy-policy"
-                    >privacy policy</a
+                This website uses cookies to improve your user experience. By using our website, you consent to all cookies in accordance with our <a
+                    href={resolve('/privacy-policy')}>privacy policy</a
                 >.
             </p>
             <div class="buttons">
@@ -101,7 +102,7 @@
                 cursor: pointer;
                 transition:
                     background-color $animation-duration-default ease-in-out,
-                    color $animation-duration-default ease-in-out;
+                    color $animation-duration-default ease-in-out !important;
 
                 &:hover {
                     color: $color-brand-primary;

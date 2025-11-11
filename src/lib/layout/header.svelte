@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import { page } from '$app/state';
 
     // verify the current url pathname equals the menu href
@@ -6,7 +7,7 @@
 
     // check the scroll state to decrease the header padding
     let scrollY: number = $state(0);
-    let scrollOffsetClass = (): string | null => (scrollY > 1 ? 'scrolled' : null);
+    let isScrolled = $derived(scrollY > 1);
 
     // toggle mobile menu state
     let mobileMenuActive: boolean = $state(false);
@@ -28,9 +29,9 @@
 
 <svelte:window bind:scrollY bind:innerWidth />
 
-<header class={scrollOffsetClass()}>
+<header class:scrolled={isScrolled}>
     <div class="logo">
-        <a href="/">
+        <a href={resolve('/')}>
             <img alt="tukkr logo" height="42" width="42" src="/logo.svg" />
         </a>
     </div>
@@ -42,10 +43,10 @@
         </svg>
     </button>
     <nav aria-label="Main menu" class:active={mobileMenuActive} id="main-menu">
-        <a class:active={isCurrentPage('')} href="/">Home</a>
-        <a class:active={isCurrentPage('about')} href="/about">About</a>
-        <a class:active={isCurrentPage('snippets')} href="/snippets">Snippets</a>
-        <a class:active={isCurrentPage('contact')} href="/contact">Contact</a>
+        <a class:active={isCurrentPage('')} href={resolve('/')}>Home</a>
+        <a class:active={isCurrentPage('about')} href={resolve('/about')}>About</a>
+        <a class:active={isCurrentPage('snippets')} href={resolve('/snippets')}>Snippets</a>
+        <a class:active={isCurrentPage('contact')} href={resolve('/contact')}>Contact</a>
     </nav>
 </header>
 
@@ -61,7 +62,7 @@
         will-change: padding;
         padding: 1.8rem 2rem;
         background-color: rgba(255, 255, 255, 0.94);
-        transition: padding 0.2s ease-in-out;
+        transition: padding 0.2s ease-in-out !important;
         z-index: 999;
 
         // change padding if window is scrolled
@@ -86,7 +87,7 @@
                 will-change: transform, stroke-dashoffset;
                 transition:
                     transform $animation-duration-slow ease-in-out,
-                    stroke-dashoffset $animation-duration-slow ease-in-out;
+                    stroke-dashoffset $animation-duration-slow ease-in-out !important;
 
                 path {
                     fill: none;
@@ -128,7 +129,7 @@
             margin-top: 0;
             transition:
                 height $animation-duration-slow ease-in-out,
-                margin-top $animation-duration-slow ease-in-out;
+                margin-top $animation-duration-slow ease-in-out !important;
 
             &.active {
                 // note: height must be a fixed value for transition to work properly
@@ -144,7 +145,7 @@
                 margin-top: 0 !important;
 
                 // disable transition to prevent weird rescaling animations
-                transition: none;
+                transition: none !important;
             }
 
             a {

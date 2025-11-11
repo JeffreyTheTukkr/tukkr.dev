@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import SEO from '$lib/components/seo.svelte';
 </script>
 
@@ -8,15 +9,15 @@
     <h1>tukkr</h1>
     <p>Hey! I am Jeffrey, a Fullstack Web Developer from The Netherlands.</p>
     <div class="page-actions">
-        <a href="/about" class="about">
+        <a href={resolve('/about')} class="about">
             <h2>About me</h2>
             <p>Read more about me and my past experiences.</p>
         </a>
-        <a href="/snippets" class="snippets">
+        <a href={resolve('/snippets')} class="snippets">
             <h2>Snippets</h2>
             <p>The place where I store some cool snippets / knowledge.</p>
         </a>
-        <a href="/contact" class="contact">
+        <a href={resolve('/contact')} class="contact">
             <h2>Get in touch</h2>
             <p>In for a friendly chat? Contact me directly!</p>
         </a>
@@ -41,7 +42,7 @@
             padding: 1rem;
             border: 1px solid $color-border-primary;
             border-radius: 16px;
-            transition: border-color $animation-duration-default ease-in-out;
+            transition: border-color $animation-duration-default ease-in-out !important;
 
             @include mediaQuery(s) {
                 width: calc((100% - 2rem) / 2);

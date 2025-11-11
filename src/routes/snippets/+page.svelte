@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import SEO from '$lib/components/seo.svelte';
     import type { PageData } from './$types';
 
@@ -12,7 +13,8 @@
     <p>While I'm not big on blog writing, I do occasionally come across some neat pieces of code or specific knowledge which I find worth sharing - <i>or storing</i>.</p>
     <div class="posts">
         {#each data.posts as post (post.date)}
-            <a href={'/snippets/' + post.slug} class="post>">
+            <!-- eslint-disable-next-line @typescript-eslint/no-explicit-any -->
+            <a href={resolve(('/snippets/' + post.slug) as any)} class="post">
                 <div class="title">
                     <h2>{post.title}</h2>
                     <span>{post.date.toLocaleDateString('en-GB')}</span>
@@ -34,7 +36,7 @@
             padding: 1rem;
             border: 1px solid $color-border-primary;
             border-radius: 16px;
-            transition: border-color $animation-duration-default ease-in-out;
+            transition: border-color $animation-duration-default ease-in-out !important;
 
             &:hover {
                 border-color: $color-border-dark;

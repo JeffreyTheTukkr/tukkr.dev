@@ -5,16 +5,15 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     css: {
         preprocessorOptions: {
+            // use modern api for sass 1.x - required for @use syntax
             scss: {
                 api: 'modern',
-
-                // required for (global) variables and mixins to work
-                // within `.svelte` files
                 additionalData: `
                     @use '/src/scss/variables' as *;
                     @use '/src/scss/mixins' as *;
                 `
-            }
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            } as any
         }
     },
 

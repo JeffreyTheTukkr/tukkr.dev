@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import SEO from '$lib/components/seo.svelte';
 
     // calculate my age in years
@@ -40,8 +41,9 @@
         <li><b>Hosting:</b> Debian and RHEL based distributions, Plesk, DirectAdmin, WHM.</li>
     </ul>
     <p>
-        Please note that these are only the technologies I am most confident in, I have worked with other stacks and technologies so feel free to <a href="/contact">reach out</a> to
-        me for a friendly chat!
+        Please note that these are only the technologies I am most confident in, I have worked with other stacks and technologies so feel free to <a href={resolve('/contact')}
+            >reach out</a
+        > to me for a friendly chat!
     </p>
 </div>
 

@@ -1,15 +1,19 @@
+<script lang="ts">
+    import { resolve } from '$app/paths';
+</script>
+
 <footer>
     <div class="container">
         <div class="info">
             <span class="name"><b>tukkr</b></span>
             <span><a href="mailto:info@tukkr.dev">info@tukkr.dev</a></span>
-            <span><a href="/contact">Contact</a></span>
+            <span><a href={resolve('/contact')}>Contact</a></span>
         </div>
         <nav aria-label="Footer menu">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/snippets">Snippets</a>
-            <a href="/contact">Contact</a>
+            <a href={resolve('/')}>Home</a>
+            <a href={resolve('/about')}>About</a>
+            <a href={resolve('/snippets')}>Snippets</a>
+            <a href={resolve('/contact')}>Contact</a>
         </nav>
         <div class="socials">
             <a href="https://www.linkedin.com/in/jeffrey-boesenkool/" target="_blank" rel="noopener">LinkedIn</a>

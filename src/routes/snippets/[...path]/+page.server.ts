@@ -15,7 +15,7 @@ export const load: ServerLoad = async ({ url }): Promise<{ post: SnippetI }> => 
     };
 };
 
-const highlighter = (code: string, lang?: string): string => {
+const highlighter = (code: string, lang?: string | null): string => {
     const className: string = 'language-' + lang;
 
     return `<pre><code class=${className}>${code}</code></pre>`;
