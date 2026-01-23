@@ -1,15 +1,34 @@
 import { getAllSnippets, type SnippetI } from '$lib/server/mdx';
 
 const site: string = 'https://tukkr.dev';
-const pages: string[] = [];
+
+type SitemapPage = {
+    url: string;
+    priority: number;
+    lastmod?: string;
+};
+
+const formatDate = (date: Date): string => date.toISOString().split('T')[0];
 
 export async function GET(): Promise<Response> {
-    // append static pages to sitemap
-    ['', '/about', '/snippets', '/contact', '/privacy-policy'].map((item: string) => pages.push(item));
+    const pages: SitemapPage[] = [];
 
-    // append dynamic snippet pages to sitemap
+    // static pages with varied priorities
+    pages.push({ url: '', priority: 1.0 });
+    pages.push({ url: '/about', priority: 0.8 });
+    pages.push({ url: '/snippets', priority: 0.8 });
+    pages.push({ url: '/contact', priority: 0.8 });
+    pages.push({ url: '/privacy-policy', priority: 0.3 });
+
+    // dynamic snippet pages with publication dates
     const snippets: SnippetI[] = getAllSnippets();
-    snippets.map((item: SnippetI) => pages.push('/snippets/' + item.slug));
+    snippets.forEach((item: SnippetI) => {
+        pages.push({
+            url: '/snippets/' + item.slug,
+            priority: 0.6,
+            lastmod: formatDate(item.date)
+        });
+    });
 
     return new Response(
         `
@@ -24,11 +43,12 @@ export async function GET(): Promise<Response> {
 		>
 			${pages
                 .map(
-                    (item: string): string => `
+                    (page: SitemapPage): string => `
 			    <url>
-			        <loc>${site}${item}</loc>
+			        <loc>${site}${page.url}</loc>
 			        <changefreq>weekly</changefreq>
-                    <priority>0.5</priority>
+                    <priority>${page.priority}</priority>
+                    ${page.lastmod ? `<lastmod>${page.lastmod}</lastmod>` : ''}
 			    </url>
 			`
                 )

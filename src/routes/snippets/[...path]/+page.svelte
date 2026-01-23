@@ -5,7 +5,7 @@
     export let data: PageData;
 </script>
 
-<SEO title={data.post.title} description={data.post.description} />
+<SEO title={data.post.title} description={data.post.description} type="article" publishedAt={data.post.date} />
 
 <div class="container">
     <h1>{data.post.title}</h1>
