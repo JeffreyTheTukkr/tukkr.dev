@@ -51,7 +51,7 @@
 </script>
 
 <svelte:head>
-    <title>{title} &raquo tukkr.dev</title>
+    <title>{title} &raquo; tukkr.dev</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={url} />
     <meta name="robots" content={(index ? 'index' : 'noindex') + ' ' + (follow ? 'follow' : 'nofollow')} />
@@ -64,6 +64,7 @@
     <meta property="og:locale" content="en" />
     <meta property="og:image" content={imageUrl} />
 
+    <!-- @todo: fix this -->
     <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-    {@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
+    {@html '<script type="application/ld+json">' + JSON.stringify(jsonLd) + '</scr' + 'ipt>'}
 </svelte:head>
