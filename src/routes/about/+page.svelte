@@ -12,7 +12,7 @@
 
 <SEO
     title="About me"
-    description="Hi! I am Jeffrey, a 27-year-old fullstack web developer from the Netherlands with a passion for transforming technical challenges into user-friendly solutions. With 5 years of professional experience, I specializes in creating practical, innovative web applications"
+    description="Hi! I am Jeffrey, a {age}-year-old fullstack web developer from the Netherlands with a passion for transforming technical challenges into user-friendly solutions. With 5 years of professional experience, I specializes in creating practical, innovative web applications"
 />
 
 <div class="container">
