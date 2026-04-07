@@ -6,7 +6,7 @@ Repository for the [tukkr.dev](https://tukkr.dev) website.
 
 ```
 nodejs   >= v24.14
-pnpm     >= v10.30
+pnpm     >= v10.33
 ```
 
 **Quick commands**
