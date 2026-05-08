@@ -5,7 +5,7 @@
 <footer>
     <div class="container">
         <div class="info">
-            <span class="name"><b>tukkr</b></span>
+            <span class="name"><b>tukkr LLC</b></span>
             <span><a href="mailto:info@tukkr.dev">info@tukkr.dev</a></span>
             <span><a href={resolve('/contact')}>Contact</a></span>
         </div>
