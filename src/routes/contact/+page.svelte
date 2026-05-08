@@ -10,10 +10,8 @@
     <div class="content">
         <div class="company">
             <h2>Company details</h2>
-            <p><b>Name:</b> tukkr</p>
-            <p><b>Coc:</b> 92668828</p>
-            <p><b>Vat:</b> NL004968891B61</p>
-            <p><b>Address:</b><br />De Dorsmolen 47<br />7623HT Borne<br />The Netherlands</p>
+            <p><b>Name:</b> tukkr LLC</p>
+            <p><b>Address:</b><br />30 N Goud Stg Ste R<br />82801 Sheridan WY<br />United States of America</p>
         </div>
         <div class="contact">
             <h2>Contact details</h2>
