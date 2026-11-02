@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from '$app/state';
-    import { siteUrl } from '$lib/site';
+    import { siteUrl } from '#lib/site.ts';
 
     type Props = {
         title: string;

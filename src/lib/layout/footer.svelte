@@ -1,7 +1,7 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
-    import { consent } from '$lib/consent.svelte';
-    import { email } from '$lib/site';
+    import { consent } from '#lib/consent.svelte.ts';
+    import { email } from '#lib/site.ts';
 </script>
 
 <footer>

@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from '$app/state';
-    import SEO from '$lib/components/seo.svelte';
+    import SEO from '#lib/components/seo.svelte';
 
     const errMsg = $derived(page.error?.message ? '- ' + page.error.message : '');
     const timestamp = new Date().toISOString();

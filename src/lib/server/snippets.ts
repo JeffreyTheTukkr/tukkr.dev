@@ -1,4 +1,4 @@
-import type { SnippetEntry, SnippetMetadata } from '$lib/snippets';
+import type { SnippetEntry, SnippetMetadata } from '#lib/snippets.ts';
 
 const metadata = import.meta.glob<SnippetMetadata>('/data/snippets/*.md', { eager: true, import: 'metadata' });
 

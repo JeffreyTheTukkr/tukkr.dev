@@ -1,10 +1,10 @@
 <script lang="ts">
     import '../scss/global.scss';
     import type { Snippet } from 'svelte';
-    import Analytics from '$lib/components/analytics.svelte';
+    import Analytics from '#lib/components/analytics.svelte';
 
-    import HeaderLayout from '$lib/layout/header.svelte';
-    import FooterLayout from '$lib/layout/footer.svelte';
+    import HeaderLayout from '#lib/layout/header.svelte';
+    import FooterLayout from '#lib/layout/footer.svelte';
 
     let { children }: { children: Snippet } = $props();
 </script>

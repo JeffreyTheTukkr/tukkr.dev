@@ -1,6 +1,6 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
-    import SEO from '$lib/components/seo.svelte';
+    import SEO from '#lib/components/seo.svelte';
 </script>
 
 <SEO title="Fullstack Web Developer" description="Hey! I am Jeffrey, a Fullstack Web Developer from The Netherlands." />

@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { getSnippet } from '$lib/snippets';
+import { getSnippet } from '#lib/snippets.ts';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import SEO from '$lib/components/seo.svelte';
-    import { email } from '$lib/site';
+    import SEO from '#lib/components/seo.svelte';
+    import { email } from '#lib/site.ts';
 </script>
 
 <SEO title="Contact" description="In for a friendly chat or need some help with your project? Contact me directly!" />

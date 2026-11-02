@@ -1,5 +1,5 @@
 <script lang="ts">
-    import SEO from '$lib/components/seo.svelte';
+    import SEO from '#lib/components/seo.svelte';
     import type { PageProps } from './$types';
 
     let { data }: PageProps = $props();

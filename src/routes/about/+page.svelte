@@ -1,6 +1,6 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
-    import SEO from '$lib/components/seo.svelte';
+    import SEO from '#lib/components/seo.svelte';
 
     // calculate my age in years
     const age: number = new Date(Date.now() - new Date('1996-08-02').getTime()).getUTCFullYear() - 1970;

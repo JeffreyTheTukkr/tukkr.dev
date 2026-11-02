@@ -1,5 +1,5 @@
-import { getSnippets } from '$lib/server/snippets';
-import { siteUrl } from '$lib/site';
+import { getSnippets } from '#lib/server/snippets.ts';
+import { siteUrl } from '#lib/site.ts';
 
 export const prerender = true;
 
