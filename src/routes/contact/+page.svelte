@@ -11,7 +11,7 @@
         <div class="company">
             <h2>Company details</h2>
             <p><b>Name:</b> tukkr LLC</p>
-            <p><b>Address:</b><br />30 N Goud Stg Ste R<br />82801 Sheridan WY<br />United States of America</p>
+            <p><b>Address:</b><br />30 N Gould St Ste R<br />Sheridan, WY 82801<br />United States of America</p>
         </div>
         <div class="contact">
             <h2>Contact details</h2>
