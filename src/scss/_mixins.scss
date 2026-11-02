@@ -35,7 +35,7 @@
         border-radius: 1px;
         background-color: $color-brand-primary;
         transform: scaleX(0);
-        transition: transform $animation-duration-default ease-in-out !important;
+        transition: transform $animation-duration-default ease-in-out;
     }
 
     &:hover::before {

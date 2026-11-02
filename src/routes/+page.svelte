@@ -42,7 +42,7 @@
             padding: 1rem;
             border: 1px solid $color-border-primary;
             border-radius: 16px;
-            transition: border-color $animation-duration-default ease-in-out !important;
+            transition: border-color $animation-duration-default ease-in-out;
 
             @include mediaQuery(s) {
                 width: calc((100% - 2rem) / 2);
