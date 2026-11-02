@@ -1,13 +1,16 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
+    import { consent } from '$lib/consent.svelte';
+    import { email } from '$lib/site';
 </script>
 
 <footer>
     <div class="container">
         <div class="info">
             <span class="name"><b>tukkr LLC</b></span>
-            <span><a href="mailto:info@tukkr.dev">info@tukkr.dev</a></span>
+            <span><a href="mailto:{email}">{email}</a></span>
             <span><a href={resolve('/contact')}>Contact</a></span>
+            <span><button onclick={() => (consent.value = null)}>Cookie settings</button></span>
         </div>
         <nav aria-label="Footer menu">
             <a href={resolve('/')}>Home</a>
@@ -43,6 +46,20 @@
                 display: inherit;
                 flex-direction: column;
                 gap: 1rem;
+            }
+        }
+
+        button {
+            padding: 0;
+            border: none;
+            background: none;
+            color: inherit;
+            cursor: pointer;
+            transition: color $animation-duration-default ease-in-out;
+
+            &:hover,
+            &:focus {
+                color: $color-font-dark;
             }
         }
 

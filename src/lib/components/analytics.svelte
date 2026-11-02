@@ -1,61 +1,73 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
     import { browser } from '$app/environment';
     import { resolve } from '$app/paths';
     import { PUBLIC_GA4_ID } from '$env/static/public';
+    import { consent, type Consent } from '$lib/consent.svelte';
 
-    // locally store if a user has allowed the usage of cookies
-    let cookiesAllowedByUser: boolean;
+    const storageKey = 'analytics-consent';
 
-    // enable Google Analytics integration
+    const readConsent = (): Consent | null => {
+        try {
+            const value = localStorage.getItem(storageKey);
+            return value === 'granted' || value === 'denied' ? value : null;
+        } catch {
+            return null;
+        }
+    };
+
+    const choose = (value: Consent): void => {
+        consent.value = value;
+        window.gtag?.('consent', 'update', { analytics_storage: value });
+
+        try {
+            localStorage.setItem(storageKey, value);
+        } catch {
+            // storage blocked, the choice only lasts for this page load
+        }
+    };
+
     if (browser) {
         window.dataLayer = window.dataLayer || [];
         window.gtag = function gtag(): void {
             window.dataLayer.push(arguments);
         };
 
-        // set consent to denied by default
         window.gtag('consent', 'default', {
             ad_storage: 'denied',
             ad_user_data: 'denied',
             ad_personalization: 'denied',
-            analytics_storage: 'denied'
+            analytics_storage: readConsent() === 'granted' ? 'granted' : 'denied'
         });
 
-        // initialize analytics
         window.gtag('js', new Date());
         window.gtag('config', PUBLIC_GA4_ID);
     }
 
-    // set Google Analytics consent to granted when cookies are allowed
-    $: if (cookiesAllowedByUser && window.gtag) {
-        window.gtag('consent', 'update', {
-            ad_storage: 'granted',
-            ad_user_data: 'granted',
-            ad_personalization: 'granted',
-            analytics_storage: 'granted'
-        });
-    }
+    onMount(() => {
+        consent.value = readConsent();
+    });
 </script>
 
 <svelte:head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id={PUBLIC_GA4_ID}" nonce="%svelktekit.nonce%"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={PUBLIC_GA4_ID}"></script>
 </svelte:head>
 
-{#if cookiesAllowedByUser === undefined}
-    <div class="cookie-consent">
+{#if consent.value === null}
+    <section class="cookie-consent" aria-label="Cookie notice">
         <div class="container">
             <span>Cookie notice</span>
             <p>
-                This website uses cookies to improve your user experience. By using our website, you consent to all cookies in accordance with our <a
+                This website uses Google Analytics cookies to understand how visitors use it. These cookies are only set if you allow them. Read more in the <a
                     href={resolve('/privacy-policy')}>privacy policy</a
                 >.
             </p>
             <div class="buttons">
-                <button on:click={() => (cookiesAllowedByUser = false)}>Decline</button>
-                <button on:click={() => (cookiesAllowedByUser = true)}>Allow</button>
+                <button onclick={() => choose('denied')}>Decline</button>
+                <button onclick={() => choose('granted')}>Allow</button>
             </div>
         </div>
-    </div>
+    </section>
 {/if}
 
 <style lang="scss">
@@ -102,7 +114,7 @@
                 cursor: pointer;
                 transition:
                     background-color $animation-duration-default ease-in-out,
-                    color $animation-duration-default ease-in-out !important;
+                    color $animation-duration-default ease-in-out;
 
                 &:hover {
                     color: $color-brand-primary;
