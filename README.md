@@ -5,8 +5,8 @@ Repository for the [tukkr.dev](https://tukkr.dev) website.
 **Requirements**
 
 ```
-nodejs   >= v24.22
-pnpm     >= v12.15
+nodejs   >= v26.13
+pnpm     >= v12.16
 ```
 
 **Quick commands**
