@@ -92,6 +92,10 @@
             font-weight: $font-weight-primary-medium;
         }
 
+        p a {
+            @include contentAnchorStyling;
+        }
+
         .buttons {
             width: 100%;
             display: flex;

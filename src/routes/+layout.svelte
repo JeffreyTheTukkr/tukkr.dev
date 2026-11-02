@@ -25,5 +25,9 @@
         :global(p) {
             margin: 1em 0;
         }
+
+        :global(:is(p, li) a) {
+            @include contentAnchorStyling;
+        }
     }
 </style>

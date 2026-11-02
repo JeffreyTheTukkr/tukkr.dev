@@ -46,11 +46,3 @@
         > to me for a friendly chat!
     </p>
 </div>
-
-<style lang="scss">
-    .container {
-        :global(a) {
-            @include contentAnchorStyling;
-        }
-    }
-</style>

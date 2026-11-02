@@ -60,13 +60,17 @@
         justify-content: space-between;
         align-items: center;
         padding: 1.8rem 2rem;
+        border-bottom: 1px solid transparent;
         background-color: rgba(255, 255, 255, 0.94);
-        transition: padding 0.2s ease-in-out;
+        transition:
+            padding 0.2s ease-in-out,
+            border-color 0.2s ease-in-out;
         z-index: 999;
 
         // change padding if window is scrolled
         &.scrolled {
             padding: 1.2rem 2rem;
+            border-color: $color-border-primary;
         }
 
         // hamburger menu
