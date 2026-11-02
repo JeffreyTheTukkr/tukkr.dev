@@ -6,19 +6,29 @@ on:
     workflows: ['continuous integration']
     types:
       - completed
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
-      - uses: pnpm/action-setup@v6
-        with:
-          version: 12
+          cache: 'pnpm'
       - name: install dependencies
         run: pnpm install
       - name: generate .env file
@@ -26,15 +36,14 @@ jobs:
           touch .env
           echo APP_ENV="production" >> .env
           echo PUBLIC_GA4_ID="${{ vars.GA4_ID }}" >> .env
-          echo PUBLIC_SENTRY_DSN="${{ vars.PUBLIC_SENTRY_DSN }}" >> .env
-          echo SENTRY_AUTH_TOKEN="${{ secrets.SENTRY_AUTH_TOKEN }}" >> .env
       - name: build project
         run: pnpm build
       - name: copy files to server
-        uses: appleboy/scp-action@v1
+        uses: appleboy/scp-action@ff85246acaad7bdce478db94a363cd2bf7c90345 # v1.0.0
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
+          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
           source: '*,.env,!.git,!.github,!.husky'
           target: 'container'
