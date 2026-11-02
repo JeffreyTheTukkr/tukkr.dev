@@ -1,17 +1,20 @@
 <script lang="ts">
-    import '@/scss/global.scss';
+    import '../scss/global.scss';
+    import type { Snippet } from 'svelte';
     import Analytics from '$lib/components/analytics.svelte';
 
     import HeaderLayout from '$lib/layout/header.svelte';
     import FooterLayout from '$lib/layout/footer.svelte';
+
+    let { children }: { children: Snippet } = $props();
 </script>
 
-<svelte:component this={HeaderLayout} />
+<HeaderLayout />
 <main>
-    <slot />
+    {@render children()}
 </main>
-<svelte:component this={Analytics} />
-<svelte:component this={FooterLayout} />
+<Analytics />
+<FooterLayout />
 
 <style lang="scss">
     main {

@@ -1,10 +1,4 @@
-import { getAllSnippets, type SnippetI } from '$lib/server/mdx';
-import type { ServerLoad } from '@sveltejs/kit';
+import { formatDate, getSnippets } from '$lib/server/snippets';
+import type { PageServerLoad } from './$types';
 
-export const load: ServerLoad = () => {
-    const allSnippets: SnippetI[] = getAllSnippets();
-
-    return {
-        posts: allSnippets
-    };
-};
+export const load: PageServerLoad = () => ({ posts: getSnippets().map((post) => ({ ...post, date: formatDate(post.publishedAt) })) });

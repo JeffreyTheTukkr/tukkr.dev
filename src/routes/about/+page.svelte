@@ -12,7 +12,7 @@
 
 <SEO
     title="About me"
-    description="Hi! I am Jeffrey, a {age}-year-old fullstack web developer from the Netherlands with a passion for transforming technical challenges into user-friendly solutions. With 5 years of professional experience, I specializes in creating practical, innovative web applications"
+    description="Hi! I am Jeffrey, a {age}-year-old fullstack web developer from the Netherlands with a passion for transforming technical challenges into user-friendly solutions. With {careerYears} years of professional experience, I specialize in creating practical, innovative web applications."
 />
 
 <div class="container">
@@ -24,7 +24,7 @@
     <p>
         During these years I have contributed to a wide range of projects and teams. My experience spans from developing custom WordPress themes and plugins, to creating
         comprehensive client portals and e-commerce systems tailored to specific business needs. Currently, I am embracing the flexibility of freelancing, which allows me to apply
-        my skills and values to a variety projects.
+        my skills and values to a variety of projects.
     </p>
     <p>If you're seeking a dedicated and experienced developer to enhance your team or project, I would be thrilled to explore how I can contribute to your success!</p>
 
@@ -37,7 +37,7 @@
         <li><b>Languages:</b> PHP, JavaScript, TypeScript, NodeJS, HTML5, CSS3 + SCSS.</li>
         <li><b>Frameworks:</b> WordPress, Laravel, Express, Strapi, React, SvelteKit.</li>
         <li><b>Databases:</b> MariaDB, PostgreSQL, MongoDB.</li>
-        <li><b>CI/CD:</b> Jenkins, Github Actions, Docker, Podman.</li>
+        <li><b>CI/CD:</b> Jenkins, GitHub Actions, Docker, Podman.</li>
         <li><b>Hosting:</b> Debian and RHEL based distributions, Plesk, DirectAdmin, WHM.</li>
     </ul>
     <p>

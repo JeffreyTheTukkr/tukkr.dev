@@ -1,5 +1,6 @@
 <script lang="ts">
     import SEO from '$lib/components/seo.svelte';
+    import { email } from '$lib/site';
 </script>
 
 <SEO title="Contact" description="In for a friendly chat or need some help with your project? Contact me directly!" />
@@ -15,10 +16,10 @@
         </div>
         <div class="contact">
             <h2>Contact details</h2>
-            <p><b>Email:</b> <a href="mailto:info@tukkr.dev">info@tukkr.dev</a></p>
+            <p><b>Email:</b> <a href="mailto:{email}">{email}</a></p>
             <p><b>Phone:</b> <a href="tel:+31642168407">+31 (0)6 421 684 07</a></p>
             <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jeffrey-boesenkool/" target="_blank" rel="noopener">Jeffrey Boesenkool</a></p>
-            <p><b>Github:</b> <a href="https://github.com/JeffreyTheTukkr" target="_blank" rel="noopener">JeffreyTheTukkr</a></p>
+            <p><b>GitHub:</b> <a href="https://github.com/JeffreyTheTukkr" target="_blank" rel="noopener">JeffreyTheTukkr</a></p>
         </div>
     </div>
 </div>
